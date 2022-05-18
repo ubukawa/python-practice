@@ -29,7 +29,10 @@ for record in data:
     else:
         pass
     adm1 = record[1] + adm1
-    record[4] = adm1
+    if i != 0:
+        record[4] = adm1
+    else:
+        pass
 
     ### ADM2
     if i == 0:
@@ -48,10 +51,12 @@ for record in data:
     else:
         pass
     adm2 = adm1 + adm2
-    record[5] = adm2
+    if i != 0:
+        record[5] = adm2
+    else:
+        pass
 
-    print(record[4])
-    print(record[5])
+    print(record)
     i += 1
 
 
