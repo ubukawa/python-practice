@@ -14,8 +14,10 @@ k = 1 #admin2 num
 for record in data:
     ### ADM1
     ii = i - 1
-    if i == 0: 
-        j == 1
+    if i < 2:  # I assume that the first record is title.
+        j = 1
+    elif data[i][1] != data[ii][1]: #If country changes, j will be 1
+        j = 1
     elif data[i][2] != data[ii][2]: #if adm1 name is different from the previous one, add 1 to j
         j += 1
     else:
@@ -35,9 +37,9 @@ for record in data:
 
     ### ADM2
     if i == 0:
-        k == 1
-    elif data[i][2] != data[ii][2]: #When ADM1 changes, k will be 1
-        k == 1
+        k = 1
+    elif data[i][1] != data[ii][1] or data[i][2] != data[ii][2]: #When country or ADM1 changes, k will be 1
+        k = 1
     elif data[i][3] != data[ii][3]: #If ADM2 changes, add 1 to K
         k += 1
     else:
