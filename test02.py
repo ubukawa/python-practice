@@ -1,6 +1,5 @@
 # For reading CSV
 import csv
-import pprint # maybe used later
 
 with open('data.csv', newline='') as f: #open csv
     reader = csv.reader(f) # define reader as CSB object
